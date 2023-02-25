@@ -52,7 +52,10 @@ router.delete('/:id', (req, res) => {
    const id = req.params.id
    const userId = req.user.id
    return Todo.destroy({ where: {id, userId}})
-      .then(() => res.redirect('/'))
+      .then(() => {
+         req.flash('success_msg', 'delete successfully.')
+         res.redirect('/')
+      })
       .catch((err) => console.log(err))
 })
 
