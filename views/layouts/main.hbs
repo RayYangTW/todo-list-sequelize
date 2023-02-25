@@ -28,6 +28,17 @@
          {{{ body }}}
       </div>
    </main>
+   <script>
+      function confirmBox() {
+         const result = confirm('確定刪除？')
+         if (result) {
+            return true
+         } else {
+            event.preventDefault()
+            return false
+         }
+      }
+   </script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
    <script src="https://kit.fontawesome.com/1d8d5b9c52.js" crossorigin="anonymous"></script>
